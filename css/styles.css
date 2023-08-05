@@ -25,3 +25,49 @@ body {
   color: var(--text-color);
   font-family: raleway_f, sans-serif;
 }
+
+.main-header {
+  position: relative;
+}
+
+.layers {
+  position: relative;
+
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  overflow: hidden;
+}
+
+.layer {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  background-size: cover;
+  background-position: center;
+
+  will-change: transform;
+}
+
+.layers__base {
+  transform: translate3d(0, calc(var(--scrollTop) / 1.6), 0);
+}
+
+.layers__middle {
+  transform: translate3d(0, calc(var(--scrollTop) / 2.5), 0);
+}
+
+.layers__front {
+  transform: translate3d(0, calc(var(--scrollTop) / 5.7), 0);
+}
+
+.main-article {
+  min-height: 100vh;
+}
