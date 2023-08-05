@@ -9,6 +9,7 @@
   --text-color: #e7e7e0;
   --shadow-color: #9e7d35;
   --index: calc(1vw + 1vh);
+  --transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
 }
 
 @font-face {
@@ -26,6 +27,10 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   font-family: raleway_f, sans-serif;
+}
+
+.content {
+  will-change: transform;
 }
 
 .main-header {
@@ -70,6 +75,7 @@ body {
   color: var(--text-color);
 
   transform: translate3d(0, calc(var(--scrollTop) / 2), 0);
+  transition: var(--transition);
   will-change: transform;
 }
 
@@ -94,6 +100,7 @@ body {
   background-size: cover;
   background-position: center;
 
+  transition: var(--transition);
   will-change: transform;
 }
 
@@ -134,6 +141,7 @@ body {
   text-transform: uppercase;
 
   transform: var(--main-article-transform);
+  transition: var(--transition);
   will-change: transform;
 }
 
@@ -145,6 +153,7 @@ body {
   font-size: calc(var(--index) * 0.9);
 
   transform: var(--main-article-transform);
+  transition: var(--transition);
   will-change: transform;
 }
 
